@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+h1 {
+    color: #333;
+}
+#tateti {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+    max-width: 320px;
+    background-color: #cce7ff; /* Fondo celeste */
+    padding: 5px;
+    border-radius: 10px;
+}
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid #ccc;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.cell.taken {
+    cursor: not-allowed;
+    background-color: #e0e0e0;
+}
+.cell.winner {
+    background-color: #4caf50; /* Verde para las celdas ganadoras */
+    color: white;
+    font-weight: bold;
+}
+#message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #444;
+}
